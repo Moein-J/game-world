@@ -1,0 +1,13 @@
+.tab_content {
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.35s;
+}
+
+.tab input:checked~.tab_content {
+    max-height: 15rem;
+}
+
+.tab input:checked~label .rotating_icon {
+    transform: rotate(180deg);
+}

@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* width */
+::-webkit-scrollbar {
+  width: 7px;
+  border-radius: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #9a9a9a;
+  border-radius: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #555;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #1a1919;
+}
+
+@layer components {
+  .nav-links {
+    @apply hover:text-[#e58e27] whitespace-nowrap;
+  }
+
+  .landing-p {
+    @apply font-bold relative text-[#ffffff] md:leading-[3.5rem] lg:leading-[2.5rem] xl:leading-[3.5rem] 1.5xl:leading-[3.5rem] 2xl:leading-[3.5rem] md:text-lg lg:text-lg xl:text-2xl 1.5xl:text-3xl 2xl:text-4xl
+  }
+
+  .login-input {
+    @apply focus:outline-none bg-[#121212] border-b-2 border-[#fff] text-right p-2 w-2/3 caret-links text-[#fff]
+  }
+
+}
