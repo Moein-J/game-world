@@ -1,5 +1,5 @@
-import Repacks from "./Repacks";
-const Download = () => {
+import Repacks from "./repack/Repacks";
+const Download = ({repacks}) => {
   return (
     <div className="px-8 flex flex-col gap-6">
       <div className="flex items-center gap-10">
@@ -7,7 +7,7 @@ const Download = () => {
         <p className="text-nowrap text-[#ffffff] text-lg"> قسمت دانلود</p>
         <div className="w-1/2 h-[0.1rem] bg-[#e58e27]"></div>
       </div>
-      <Repacks />
+      <Repacks repacks={repacks}/>
       
     </div>
   );

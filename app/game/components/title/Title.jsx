@@ -1,27 +1,27 @@
 import TitleItem from "./TitleItem";
 const Title = ({ game }) => {
   return (
-    <div className="flex-grow flex flex-col gap-8">
-      <p className="text-right text-2xl text-[#e58e27]"> {game.name} بازی</p>
+    <div dir="rtl" className="flex-grow items-start flex flex-col gap-8">
+      <p className="text-right text-2xl text-[#e58e27]">بازی {game.name} </p>
       <TitleItem
-        right_text={`${game.repacks} نسخه`}
-        left_text={`${game.platform} پلتفرم`}
+        right_text={`نسخه ${game.repacksList} `}
+        left_text={`پلتفرم ${game.platform} `}
       />
       <TitleItem
-        left_text={`${game.version} ورژن`}
-        right_text={`گیگابایت ${game.capacity} حجم`}
+        left_text={` ورژن ${game.version} `}
+        right_text={`حجم ${game.capacity} گیگابایت`}
       />
       <TitleItem
-        left_text={`${game.modify} تاریخ آخرین نسخه`}
-        right_text={`${game.release} تاریخ انتشار`}
+        right_text={`تاریخ آخرین نسخه ${game.modify} `}
+        left_text={` تاریخ انتشار ${game.release} `}
       />
       <TitleItem
-        left_text={`بازدید ${game.visited} تعداد`}
-        right_text={`کامنت ${game.comments_number} تعداد`}
+        left_text={` ${game.visited} بازدید`}
+        right_text={` ${game.comments_number} کامنت`}
       />
       <TitleItem
-        left_text={`${game.category} : دسته بندی`}
-        right_text={`در متاکرتیک ${game.meta} نمره`}
+        left_text={` دسته بندی : ${game.category} `}
+        right_text={`متاکرتیک ${game.meta} `}
       />
     </div>
   );

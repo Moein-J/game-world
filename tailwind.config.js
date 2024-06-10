@@ -26,14 +26,6 @@ module.exports = {
         "1.5xl": "1500px",
       },
       keyframes: {
-        "accordion-down": {
-          from: { height: "0" },
-          to: { height: "var(--radix-accordion-content-height)" },
-        },
-        "accordion-up": {
-          from: { height: "var(--radix-accordion-content-height)" },
-          to: { height: "0" },
-        },
         shimmer: {
           from: {
             backgroundPosition: "0 0",
@@ -42,11 +34,13 @@ module.exports = {
             backgroundPosition: "-200% 0",
           },
         },
+        gradient: {
+          to: { "background-position": "200% center" },
+        },
       },
       animation: {
-        "accordion-down": "accordion-down 0.2s ease-out",
-        "accordion-up": "accordion-up 0.2s ease-out",
         shimmer: "shimmer 2s linear infinite",
+        gradient: "gradient 8s linear infinite",
       },
     },
   },

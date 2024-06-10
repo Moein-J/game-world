@@ -42,7 +42,7 @@ const page = ({ params }) => {
             <AccordionContainer game={game} />
             {/* SYSTEM REQUREMENTS SECTION */}
             <Requirements requirements={game.requirements} />
-            <Download />
+            <Download repacks={game.repacks}/>
           </div>
         </div>
       </BackgroundGradient>

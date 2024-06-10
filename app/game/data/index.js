@@ -4,7 +4,7 @@ export const game = {
   information:
     "بازی Red Dead Redemption 2 یکی از آثار بزرگ و موفق سال پیش محسوب می‌شود که توانست کامل‌ترین نمره را از اکثر سایت‌های معتبر کسب کند و درخشش بزرگی هم در جوایز بهترین‌های سال موسوم به Game Awards داشته باشد. حال بالاخره شایعات به حقیقت پیوست و شاهد انتشار این بازی بزرگ روی کامپیوتر بودیم. نسخه رایانه های شخصی این بازی از تمام توان موجود استفاده خواهد کرد تا بتواند هر گوشه‌ای از این جهان را به تصویر بکشد و از قله‌های برفی رشته‌های گریزلی گرفته تا جاده‌های گرد و خاکی شهر لیموی را به‌صورت غنی و شگفت‌انگیز به نمایش گذارد. در نسخه کامپیوتر این بازی مغازه‌های گل و لای مخصوص روز ولنتاین عالی دیده می‌شوند و خیابان‌های سنگفرش شهر دنیس گرافیک حیرت‌انگیز بازی را به رخ همگام می‌کشد.",
   platform: "PC - PS5",
-  repacks: "FITGIRL - EMPRESS - DODI",
+  repacksList: "FITGIRL - EMPRESS - DODI",
   version: "1.4.1",
   capacity: "30 ~ 40",
   release: "1403/2/2",
@@ -27,6 +27,95 @@ export const game = {
       memory: "16 GB RAM",
       gpu: "GeForce RTX or Radeon RX 5600 or above",
       storage: "15GB",
+    },
+  },
+  repacks: {
+    DODI: {
+      parts: 18,
+      partsBase: "گیگابایت",
+      partsValue: "2",
+      totalValue: "36",
+      totalBase: "گیگابایت",
+      links: [
+        {
+          title: "لینک دانلود مستقیم پارت 1",
+          data: "https://dl6.dlhas.ir/hosein/game/June2024/08/Updates/Alan.Wake.2.Night.Springs-RUNE_www.Downloadha.com_.part01.rar",
+        },
+        {
+          title: "لینک دانلود مستقیم پارت 2",
+          data: "https://dl6.dlhas.ir/hosein/game/June2024/08/Updates/Alan.Wake.2.Night.Springs-RUNE_www.Downloadha.com_.part01.rar",
+        },
+        {
+          title: "لینک دانلود مستقیم پارت 3",
+          data: "https://dl6.dlhas.ir/hosein/game/June2024/08/Updates/Alan.Wake.2.Night.Springs-RUNE_www.Downloadha.com_.part01.rar",
+        },
+        {
+          title: "لینک دانلود مستقیم پارت 4",
+          data: "https://dl6.dlhas.ir/hosein/game/June2024/08/Updates/Alan.Wake.2.Night.Springs-RUNE_www.Downloadha.com_.part01.rar",
+        },
+        {
+          title: "لینک دانلود مستقیم پارت 5",
+          data: "https://dl6.dlhas.ir/hosein/game/June2024/08/Updates/Alan.Wake.2.Night.Springs-RUNE_www.Downloadha.com_.part01.rar",
+        },
+      ],
+    },
+    FITGIRL: {
+      parts: 15,
+      partsBase: "گیگابایت",
+      partsValue: "2",
+      totalValue: "30",
+      totalBase: "گیگابایت",
+      links: [
+        {
+          title: "لینک دانلود مستقیم پارت 1",
+          data: "https://dl6.dlhas.ir/hosein/game/June2024/08/Updates/Alan.Wake.2.Night.Springs-RUNE_www.Downloadha.com_.part01.rar",
+        },
+        {
+          title: "لینک دانلود مستقیم پارت 2",
+          data: "https://dl6.dlhas.ir/hosein/game/June2024/08/Updates/Alan.Wake.2.Night.Springs-RUNE_www.Downloadha.com_.part01.rar",
+        },
+        {
+          title: "لینک دانلود مستقیم پارت 3",
+          data: "https://dl6.dlhas.ir/hosein/game/June2024/08/Updates/Alan.Wake.2.Night.Springs-RUNE_www.Downloadha.com_.part01.rar",
+        },
+        {
+          title: "لینک دانلود مستقیم پارت 4",
+          data: "https://dl6.dlhas.ir/hosein/game/June2024/08/Updates/Alan.Wake.2.Night.Springs-RUNE_www.Downloadha.com_.part01.rar",
+        },
+        {
+          title: "لینک دانلود مستقیم پارت 5",
+          data: "https://dl6.dlhas.ir/hosein/game/June2024/08/Updates/Alan.Wake.2.Night.Springs-RUNE_www.Downloadha.com_.part01.rar",
+        },
+      ],
+    },
+    EMPRESS: {
+      parts: 20,
+      partsBase: "گیگابایت",
+      partsValue: "2",
+      totalValue: "40",
+      totalBase: "گیگابایت",
+      links: [
+        {
+          title: "لینک دانلود مستقیم پارت 1",
+          data: "https://dl6.dlhas.ir/hosein/game/June2024/08/Updates/Alan.Wake.2.Night.Springs-RUNE_www.Downloadha.com_.part01.rar",
+        },
+        {
+          title: "لینک دانلود مستقیم پارت 2",
+          data: "https://dl6.dlhas.ir/hosein/game/June2024/08/Updates/Alan.Wake.2.Night.Springs-RUNE_www.Downloadha.com_.part01.rar",
+        },
+        {
+          title: "لینک دانلود مستقیم پارت 3",
+          data: "https://dl6.dlhas.ir/hosein/game/June2024/08/Updates/Alan.Wake.2.Night.Springs-RUNE_www.Downloadha.com_.part01.rar",
+        },
+        {
+          title: "لینک دانلود مستقیم پارت 4",
+          data: "https://dl6.dlhas.ir/hosein/game/June2024/08/Updates/Alan.Wake.2.Night.Springs-RUNE_www.Downloadha.com_.part01.rar",
+        },
+        {
+          title: "لینک دانلود مستقیم پارت 5",
+          data: "https://dl6.dlhas.ir/hosein/game/June2024/08/Updates/Alan.Wake.2.Night.Springs-RUNE_www.Downloadha.com_.part01.rar",
+        },
+      ],
     },
   },
 };
