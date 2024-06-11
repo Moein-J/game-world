@@ -9,7 +9,7 @@ const LinkTitle = ({ repacks, repack }) => {
           {repacks[repack].totalBase}
         </h1>
       </div>
-      <div className="flex gap-2 text-[#9a9a9a] mt-4">
+      <div className="flex gap-2 text-[#9a9a9a]">
         <p className="">
           <CustomNumeralNumericFormat value={repacks[repack].parts} /> پارت ,
         </p>
