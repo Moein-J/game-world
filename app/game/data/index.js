@@ -58,6 +58,31 @@ export const game = {
           data: "https://dl6.dlhas.ir/hosein/game/June2024/08/Updates/Alan.Wake.2.Night.Springs-RUNE_www.Downloadha.com_.part01.rar",
         },
       ],
+      extraLinks: [
+        {
+          title: "آپدیت 1.1",
+          value: "3 گیگابایت",
+          links: [
+            {
+              title: "لینک دانلود مستقیم پارت 1",
+              data: "https://dl6.dlhas.ir/hosein/game/June2024/08/Updates/Alan.Wake.2.Night.Springs-RUNE_www.Downloadha.com_.part01.rar",
+            },
+            {
+              title: "لینک دانلود مستقیم پارت 2",
+              data: "https://dl6.dlhas.ir/hosein/game/June2024/08/Updates/Alan.Wake.2.Night.Springs-RUNE_www.Downloadha.com_.part01.rar",
+            },
+          ],
+        },
+      ],
+      guide: {
+        warining: "",
+        orders: [
+          "دقت داشته باشید که آنتی ویروس شما به طور کامل غیرفعال باشد.",
+          "فایل های فشرده را توسط نرم افزار WinRar اکسترکت کنید و فایل ISO بدست آمده پس از اکسترکت را توسط نرم افزار Daemon Tools به صورت Mount اجرا کنید.",
+          "به نصب بازی بپردازید.",
+          " فایل های موجود در پوشه RUNE یا Crack را در محل نصب بازی جایگزین نمایید.",
+        ],
+      },
     },
     FITGIRL: {
       parts: 15,
@@ -87,6 +112,31 @@ export const game = {
           data: "https://dl6.dlhas.ir/hosein/game/June2024/08/Updates/Alan.Wake.2.Night.Springs-RUNE_www.Downloadha.com_.part01.rar",
         },
       ],
+      extraLinks: [
+        {
+          title: "آپدیت 1.1",
+          value: "3 گیگابایت",
+          links: [
+            {
+              title: "لینک دانلود مستقیم پارت 1",
+              data: "https://dl6.dlhas.ir/hosein/game/June2024/08/Updates/Alan.Wake.2.Night.Springs-RUNE_www.Downloadha.com_.part01.rar",
+            },
+            {
+              title: "لینک دانلود مستقیم پارت 2",
+              data: "https://dl6.dlhas.ir/hosein/game/June2024/08/Updates/Alan.Wake.2.Night.Springs-RUNE_www.Downloadha.com_.part01.rar",
+            },
+          ],
+        },
+      ],
+      guide: {
+        warining: "",
+        orders: [
+          "دقت داشته باشید که آنتی ویروس شما به طور کامل غیرفعال باشد.",
+          "فایل های فشرده را توسط نرم افزار WinRar اکسترکت کنید و فایل ISO بدست آمده پس از اکسترکت را توسط نرم افزار Daemon Tools به صورت Mount اجرا کنید.",
+          "به نصب بازی بپردازید.",
+          " فایل های موجود در پوشه RUNE یا Crack را در محل نصب بازی جایگزین نمایید.",
+        ],
+      },
     },
     EMPRESS: {
       parts: 20,
@@ -116,6 +166,45 @@ export const game = {
           data: "https://dl6.dlhas.ir/hosein/game/June2024/08/Updates/Alan.Wake.2.Night.Springs-RUNE_www.Downloadha.com_.part01.rar",
         },
       ],
+      extraLinks: [
+        {
+          title: "آپدیت 1.1",
+          value: "3 گیگابایت",
+          links: [
+            {
+              title: "لینک دانلود مستقیم پارت 1",
+              data: "https://dl6.dlhas.ir/hosein/game/June2024/08/Updates/Alan.Wake.2.Night.Springs-RUNE_www.Downloadha.com_.part01.rar",
+            },
+            {
+              title: "لینک دانلود مستقیم پارت 2",
+              data: "https://dl6.dlhas.ir/hosein/game/June2024/08/Updates/Alan.Wake.2.Night.Springs-RUNE_www.Downloadha.com_.part01.rar",
+            },
+          ],
+        },
+        {
+          title: "آپدیت 1.1",
+          value: "3 گیگابایت",
+          links: [
+            {
+              title: "لینک دانلود مستقیم پارت 1",
+              data: "https://dl6.dlhas.ir/hosein/game/June2024/08/Updates/Alan.Wake.2.Night.Springs-RUNE_www.Downloadha.com_.part01.rar",
+            },
+            {
+              title: "لینک دانلود مستقیم پارت 2",
+              data: "https://dl6.dlhas.ir/hosein/game/June2024/08/Updates/Alan.Wake.2.Night.Springs-RUNE_www.Downloadha.com_.part01.rar",
+            },
+          ],
+        },
+      ],
+      guide: {
+        warining: "",
+        orders: [
+          "دقت داشته باشید که آنتی ویروس شما به طور کامل غیرفعال باشد.",
+          "فایل های فشرده را توسط نرم افزار WinRar اکسترکت کنید و فایل ISO بدست آمده پس از اکسترکت را توسط نرم افزار Daemon Tools به صورت Mount اجرا کنید.",
+          "به نصب بازی بپردازید.",
+          " فایل های موجود در پوشه RUNE یا Crack را در محل نصب بازی جایگزین نمایید.",
+        ],
+      },
     },
   },
 };
