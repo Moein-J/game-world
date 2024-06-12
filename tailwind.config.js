@@ -11,6 +11,9 @@ module.exports = {
   theme: {
     colors: {
       links: "#9a9a9a",
+      bgPrimary: "#121212",
+      bgSecondary: "#161a1e",
+      textOrange:'#e58e27'
     },
     container: {
       center: true,

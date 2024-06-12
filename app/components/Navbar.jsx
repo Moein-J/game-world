@@ -4,7 +4,7 @@ import { GoHeart } from "react-icons/go";
 
 const Navbar = () => {
   return (
-    <nav className="hidden z-40 bg-[#161a1e] sticky top-0 rounded-xl grid-flow-col select-none auto-cols-auto h-16 p-1 lg:grid md:hidden xl:grid 2xl:grid text-links text-lg font-bold lg:px-14 xl:px-20 2xl:px-20">
+    <nav className="hidden z-40 bg-bgSecondary sticky top-0 rounded-xl grid-flow-col select-none auto-cols-auto h-16 p-1 lg:grid md:hidden xl:grid 2xl:grid text-links text-lg font-bold lg:px-14 xl:px-20 2xl:px-20">
       <div className=" w-full h-full flex flex-row items-center gap-6">
         <Link href={"/login"}>
           <Avatar className="h-8 w-8 bg-links text-[#1b1b1b] font-normal">
@@ -18,7 +18,7 @@ const Navbar = () => {
       <div className="m-auto">
         <p>دانلودها - گیم ورلد</p>
       </div>
-      <div className=" w-full h-full flex flex-row justify-end items-center gap-10 text-[#9a9a9a] ">
+      <div className="w-full h-full flex flex-row justify-end items-center gap-10 text-links">
         <Link href={"#"} className="nav-links">
           <p>تماس با ما</p>
         </Link>
