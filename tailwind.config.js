@@ -22,9 +22,9 @@ module.exports = {
         "2xl": "1400px",
       },
     },
-
     extend: {
       screens: {
+        "xs":"320px",
         "2xl": "1619px",
         "1.5xl": "1500px",
       },

@@ -1,4 +1,4 @@
-import Navbar from "./components/Navbar";
+import Navbar from "./components/navbar/Navbar";
 import LandingPage from "./components/landingpage/LandingPage";
 import AuthorSuggest from "./components/authorSection/AuthorSuggest";
 import Popular from "./components/popularSection/Popular";
@@ -10,8 +10,8 @@ import Footer from "./components/Footer";
 export default function Home() {
   return (
     <>
-      <div className="bg-bgPrimary w-screen flex justify-center lg:pt-4 xl:pt-4 2xl:pt-4">
-        <div className="relative w-5/6 rounded-xl flex flex-col gap-16">
+      <div className="bg-bgPrimary w-screen flex justify-center lg:pt-4 xl:pt-4 2xl:pt-4 relative">
+        <div className="w-5/6 rounded-xl flex flex-col gap-16">
           <Navbar />
           <LandingPage />
           <AuthorSuggest />
