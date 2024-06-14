@@ -17,7 +17,7 @@ const LandingPage = () => {
       }}
       className="w-full xs:p-4 relative xs:flex xs:gap-8 xs:flex-col-reverse flex-col md:flex-row lg:grid lg:grid-flow-col lg:grid-cols-2"
     >
-      <div className="md:w-3/4 lg:w-full 2xl:h-[50rem] xl:h-[40rem] lg:h-[35rem] md:h-[40rem] xs:h-[30rem] xs:w-full flex justify-center">
+      <div className="md:w-3/4 lg:w-full 2xl:h-[50rem] xl:h-[40rem] lg:h-[35rem] md:h-[40rem] xs:hidden md:flex justify-center">
         <div className="relative rounded-xl xs:w-3/4 md:w-4/5 lg:w-[66%] xl:w-[64%] 2xl:w-[66%]  md:h-full">
           <Image src={"/landing-page.jpg"} fill className="rounded-3xl" />
         </div>

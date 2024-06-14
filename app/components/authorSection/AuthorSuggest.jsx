@@ -3,7 +3,7 @@ import SelectedItem from "./itemcomponents/SelectedItem";
 
 const AuthorSuggest = () => {
   return (
-    <section className="w-full  flex ">
+    <section className="w-full flex">
       <div className="flex flex-col w-[40%] p-10">
         <div className="w-full h-[19rem] flex justify-center items-center border-2 border-[#9a9a9a] text-[#ffffff]">
           <p>تبلیغ</p>
@@ -12,7 +12,7 @@ const AuthorSuggest = () => {
           <p>تبلیغ</p>
         </div>
       </div>
-      <div className="flex pr-5 flex-col h-[45rem] w-full items-center pt-9 ">
+      <div className="flex flex-col justify-center w-full items-center">
         <div
           className="w-[90%] flex h-[90%] relative bg-cover rounded-xl"
           style={{ backgroundImage: `url("/witcher3.jpg")` }}
@@ -22,8 +22,8 @@ const AuthorSuggest = () => {
           </p>
 
           <Items />
-
           <SelectedItem />
+
         </div>
       </div>
     </section>

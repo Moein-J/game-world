@@ -19,7 +19,7 @@ export default function Home() {
           <Advertisment />
           <RecentGames />
           <Advertisment />
-          <ShowCase />
+          {/* <ShowCase /> */}
         </div>
       </div>
       <Footer />

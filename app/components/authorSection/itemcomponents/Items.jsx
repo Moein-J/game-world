@@ -4,7 +4,7 @@ import Item from "./Item";
 const Items = () => {
   return (
     <>
-      <div className="flex flex-col h-full w-1/2 pb-5 justify-center  items-center">
+      <div className="flex flex-col h-full w-1/2 justify-center items-center">
         <Item
           game={{
             imgSrc: "/witcher3.jpg",
@@ -25,9 +25,9 @@ const Items = () => {
         <Item
           game={{
             imgSrc: "/gta.jpg",
-            name: "red dead redemption 2",
-            subtitle: "دانلود بازی فوق العاده gta v",
-            repacks: "fitgirl - dodi | 40 ~ 60 GB",
+            name: "elden ring",
+            subtitle: "داring",
+            repacks: "fitgirl0 ~ 60 GB",
           }}
         />
         <Item
