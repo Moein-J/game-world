@@ -7,7 +7,7 @@ const Navbar = () => {
   return (
     <>
       <Drawer />
-      <nav className="hidden z-30 bg-bgSecondary sticky -top-1 rounded-xl grid-flow-col select-none auto-cols-auto h-16 p-1 lg:grid md:hidden text-links text-lg font-bold lg:px-14 xl:px-20 2xl:px-20">
+      <nav className="hidden z-30 bg-bgSecondary sticky -top-1 rounded-xl grid-flow-col select-none auto-cols-auto h-16 p-1 lg:grid text-links text-lg font-bold lg:px-14 xl:px-20 2xl:px-20">
         <div className=" w-full h-full flex flex-row items-center gap-6">
           <Link href={"/login"}>
             <Avatar className="h-8 w-8 bg-links text-[#1b1b1b] font-normal">

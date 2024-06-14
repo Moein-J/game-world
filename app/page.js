@@ -11,7 +11,7 @@ export default function Home() {
   return (
     <>
       <div className="bg-bgPrimary w-screen flex justify-center lg:pt-4 xl:pt-4 2xl:pt-4 relative">
-        <div className="w-5/6 rounded-xl flex flex-col gap-16">
+        <div className="w-full md:w-[95%] 2xl:w-5/6 xs:p-2  rounded-xl flex flex-col lg:gap-20 md:gap-9 xs:gap-9">
           <Navbar />
           <LandingPage />
           <AuthorSuggest />
