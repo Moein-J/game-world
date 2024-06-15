@@ -22,7 +22,7 @@ const LandingPage = () => {
           <Image src={"/landing-page.jpg"} fill className="rounded-3xl" />
         </div>
       </div>
-      <div className="flex flex-col items-center md:items-end text-links text-right lg:px-12 xl:px-20 xs:gap-6 md:gap-8 lg:gap-8 2xl:gap-20 text-nowrap">
+      <div className="flex flex-col items-center md:items-end text-links text-right lg:px-14 xl:px-20 xs:gap-6 md:gap-12 lg:gap-8 2xl:gap-20 text-nowrap">
         <Title />
         <Box />
         <Footer />

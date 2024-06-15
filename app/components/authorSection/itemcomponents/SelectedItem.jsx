@@ -3,8 +3,8 @@ import { ArrowLeft } from "lucide-react";
 
 const SelectedItem = () => {
   return (
-    <div className="w-1/2 h-full flex items-end px-6 pb-8">
-      <div className="w-full h-[16rem] flex flex-col justify-between p-4 px-3 backdrop-contrast-100 shadow-inner rounded-xl bg-[#000000] bg-opacity-40 backdrop-blur-[8px]">
+    <div className="md:w-1/2 h-full flex md:items-end xs:items-center px-6 pb-8">
+      <div className="w-full md:h-[16rem] flex flex-col justify-between p-4 px-3 backdrop-contrast-100 shadow-inner rounded-xl bg-[#000000] bg-opacity-40 backdrop-blur-[8px]">
         <p className="text-[#ffffff] text-2xl text-right">
           The withcer 3 : wild hunt
         </p>

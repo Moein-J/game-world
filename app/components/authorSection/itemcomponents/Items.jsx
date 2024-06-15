@@ -1,10 +1,21 @@
 "use client";
 import Item from "./Item";
+import { motion } from "framer-motion";
 
 const Items = () => {
   return (
     <>
-      <div className="flex flex-col h-full w-1/2 justify-center items-center">
+      <motion.div
+        initial={{ opacity: 0, scale: 0.5 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        viewport={{ once: true }}
+        transition={{
+          duration: 0.8,
+          delay:0.5,
+          ease: [0, 0.71, 0.2, 1.01],
+        }}
+        className="md:flex md:flex-col md:h-full w-1/2 justify-center items-center xs:hidden"
+      >
         <Item
           game={{
             imgSrc: "/witcher3.jpg",
@@ -38,7 +49,7 @@ const Items = () => {
             repacks: "fitgirl - dodi | 40 ~ 60 GB",
           }}
         />
-      </div>
+      </motion.div>
     </>
   );
 };
