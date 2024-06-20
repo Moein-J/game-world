@@ -3,7 +3,7 @@ import Options from "./Options";
 
 const RecentGames = () => {
   return (
-    <section className="w-full relative  h-[60rem] flex p-10" id="recent-games">
+    <section className="w-full relative md:h-[55rem] xl:h-[60rem] flex xs:flex-col lg:flex-row xl:p-10" id="recent-games">
       <Options />
       <div className="flex-grow p-6 h-full grid grid-cols-4 gap-4 grid-rows-3">
         <Game

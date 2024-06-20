@@ -21,7 +21,7 @@ const Options = () => {
           <p className="grow text-center">PS5</p>
         </div>
         <h2 className="text-[#ffffff] text-lg mt-8"> : مرتب سازی بر اساس</h2>
-        <div className="flex w-full p-4 pt-8 gap-2">
+        <div className="flex xl:flex-row xs:flex-col items-center justify-center pt-8 gap-2">
           <p className="grow text-center border border-[#e58e27] rounded-xl p-2">
             جدید ترین
           </p>
