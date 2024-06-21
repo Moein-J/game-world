@@ -5,7 +5,7 @@ const Game = ({game}) => {
   return (
     <Link
       href={`/game/${game.name}`}
-      className="flex flex-col gap-4 w-full h-full rounded-xl bg-bgSecondary py-2 px-4"
+      className="flex flex-col gap-4 h-full md:w-full w-52 rounded-xl bg-bgSecondary py-2 px-4"
     >
       <div className="w-full h-36 relative">
         <Image

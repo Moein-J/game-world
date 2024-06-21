@@ -6,7 +6,7 @@ const PopularItems = ({ game }) => {
       href={`game/${game.name}`}
       className="relative flex justify-center rounded-xl w-72 h-full "
     >
-      <div className="-top-6 w-56 h-12 rounded-full z-30 bg-bgSecondary absolute flex justify-center items-center">
+      <div className="-top-6 w-56 h-12 rounded-full z-20 bg-bgSecondary absolute flex justify-center items-center">
         <p className="text-[#9a9a9a] text-xl">{game.name}</p>
       </div>
       <Image

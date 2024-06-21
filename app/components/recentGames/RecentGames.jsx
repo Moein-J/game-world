@@ -3,9 +3,9 @@ import Options from "./Options";
 
 const RecentGames = () => {
   return (
-    <section className="w-full relative md:h-[55rem] xl:h-[60rem] flex xs:flex-col lg:flex-row xl:p-10" id="recent-games">
+    <section className="w-full relative lg:h-[55rem] xl:h-[60rem] flex xs:flex-col lg:flex-row xl:p-10" id="recent-games">
       <Options />
-      <div className="flex-grow p-6 h-full grid grid-cols-4 gap-4 grid-rows-3">
+      <div className="flex-grow p-6 h-full overflow-x-auto grid xs:grid-flow-col md:grid-cols-4 md:grid-rows-3 gap-4 ">
         <Game
           game={{
             name: "Red dead redemtation 2",

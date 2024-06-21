@@ -12,7 +12,7 @@ const CheckBox = ({ name, text }) => {
     borderRadius: "0.15em",
   };
   return (
-    <label htmlFor={name} className="pt-4 flex items-center">
+    <label htmlFor={name} className="pt-4 flex items-center justify-end">
       {text}
       <input type="checkbox" name={name} value={name} />
     </label>
