@@ -22,7 +22,7 @@
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #1a1919;
+  background: #865415;
 }
 
 @layer components {
