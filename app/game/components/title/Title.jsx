@@ -1,7 +1,7 @@
 import TitleItem from "./TitleItem";
 const Title = ({ game }) => {
   return (
-    <div dir="rtl" className="flex-grow items-start flex flex-col gap-8">
+    <div dir="rtl" className="flex-grow items-start flex flex-col gap-8 xs:w-full lg:w-auto">
       <p className="text-right text-2xl text-[#e58e27]">بازی {game.name} </p>
       <TitleItem
         right_text={`نسخه ${game.repacksList} `}

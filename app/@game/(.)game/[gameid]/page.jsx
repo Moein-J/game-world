@@ -26,8 +26,8 @@ const page = ({ params }) => {
               />
             </button>
             <div className="overflow-y-auto flex flex-col overflow-x-hidden gap-8">
-              <div className="w-full flex p-4" id="game_info">
-                <div className="w-1/2 h-[30rem] relative ">
+              <div className="w-full flex p-4 xs:flex-col-reverse lg:flex-row items-center xs:gap-4 lg:gap-0" id="game_info">
+                <div className="lg:w-1/2 w-full lg:h-[30rem] xs:h-[20rem] relative">
                   <Image
                     src={"/RedDead.jpg"}
                     fill
