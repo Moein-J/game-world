@@ -7,7 +7,7 @@ import { useRef } from "react";
 const Popular = () => {
   const container = useRef(null);
   return (
-    <div className="w-full p-8 flex flex-col gap-12">
+    <div className="w-full p-8 flex flex-col gap-12 select-none">
       <div className="flex items-center gap-10">
         <div className="w-1/2 h-[0.1rem] bg-[#e58e27]"></div>
         <p className="text-nowrap text-[#ffffff] text-lg">تازه های منتخب</p>
