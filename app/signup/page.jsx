@@ -8,9 +8,9 @@ const page = () => {
       className="w-screen flex h-screen relative bg-cover justify-center items-center"
       style={{ backgroundImage: `url("/signup.png")` }}
     >
-      <div className="w-3/5 h-2/3 flex items-center gap-2">
+      <div className="2xl:w-3/5 1.5xl:w-4/5 lg:w-[90%] xs:w-full h-2/3 flex xs:flex-col lg:flex-row items-center gap-2">
         <Advertisement />
-        <div className="flex-grow h-full bg-[#121212] rounded-md flex">
+        <div className="flex-grow w-4/5 h-full bg-[#121212] rounded-md flex">
           <div className="w-[55%] h-full relative">
             <Image src={"/sign_up.jpg"} fill className="rounded-r-none rounded-l-md"/>
           </div>
