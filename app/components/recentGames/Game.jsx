@@ -4,7 +4,7 @@ import Link from "next/link";
 const Game = ({ game }) => {
   return (
     <Link
-      href={`/game/${game.name}`}
+      href={`/game/${game.id}`}
       className="flex flex-col gap-4 h-full md:w-[90%] w-52 rounded-xl bg-bgSecondary py-2 px-4"
     >
       <div className="w-full h-36 relative">
