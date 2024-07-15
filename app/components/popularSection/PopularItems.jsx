@@ -14,6 +14,7 @@ const PopularItems = ({ game }) => {
         width={1900}
         height={1200}
         className="w-full h-full z-10 rounded-2xl"
+        alt="pic"
       />
     </Link>
   );

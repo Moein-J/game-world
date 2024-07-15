@@ -11,7 +11,8 @@ const Item = ({ game }) => {
           src={game.imgSrc}
           width={90}
           height={200}
-          className="rounded-xl h-20"
+          className="rounded-xl w-auto h-auto"
+          alt="pic"
         />
         <div className="flex flex-col h-full justify-between text-sm text-right text-[#fff]">
           <p>{game.name}</p>

@@ -11,6 +11,7 @@ const Game = ({ game }) => {
         <Image
           src={game.imgSrc}
           fill
+          sizes="1920px 1080px"
           alt="game_picture"
           className="rounded-xl"
         />

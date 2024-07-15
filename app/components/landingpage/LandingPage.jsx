@@ -19,7 +19,7 @@ const LandingPage = () => {
     >
       <div className="md:w-3/4 lg:w-full 2xl:h-[50rem] xl:h-[40rem] lg:h-[35rem] md:h-[40rem] xs:hidden md:flex justify-center">
         <div className="relative rounded-xl xs:w-3/4 md:w-4/5 lg:w-[66%] xl:w-[64%] 2xl:w-[66%]  md:h-full">
-          <Image src={"/landing-page.jpg"} fill className="rounded-3xl" />
+          <Image src={"/landing-page.jpg"} fill sizes="1920px 1080px" className="rounded-3xl" alt="pic"/>
         </div>
       </div>
       <div className="flex flex-col items-center md:items-end text-links text-right lg:px-14 xl:px-20 xs:gap-6 md:gap-12 lg:gap-8 2xl:gap-20 text-nowrap">
