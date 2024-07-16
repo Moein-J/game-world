@@ -1,5 +1,4 @@
 import localFont from "next/font/local";
-
 import "./globals.css";
 
 const myFont = localFont({ src: "../public/fonts/IRANSansWeb.woff2" });

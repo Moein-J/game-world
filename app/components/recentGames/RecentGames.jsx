@@ -1,7 +1,7 @@
 import { Suspense } from "react";
 import Options from "./Options";
 import Pagination from "./Pagination";
-import Loading from "./Loading";
+import Loading from "./loading";
 import Actions from "./Actions";
 
 const RecentGames = async () => {
@@ -13,9 +13,9 @@ const RecentGames = async () => {
       >
         <Options />
         <div className="flex flex-col w-full">
-          <div className="flex-grow p-6 h-full overflow-x-auto grid xs:grid-flow-col md:grid-cols-4 md:grid-rows-3 gap-4 ">
+          <div className="flex-grow p-6 h-full overflow-x-auto grid xs:grid-flow-col md:grid-cols-4 md:grid-rows-3 gap-4">
             <Suspense fallback={<Loading />}>
-              <Actions/>
+              <Actions />
             </Suspense>
           </div>
           <Pagination />
