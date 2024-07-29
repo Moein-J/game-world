@@ -2,6 +2,9 @@ import Link from "next/link";
 import { login } from "../../lib/actions";
 import ShadowGradient from "@/components/ui/shadowgradient/ShadowGradient";
 import { redirect } from "next/navigation";
+import { signIn } from "@/lib/auth";
+import { isRedirectError } from "next/dist/client/components/redirect";
+import { AuthError } from "next-auth";
 
 const Login = () => {
   // const logingHandler = async () => {
@@ -18,8 +21,37 @@ const Login = () => {
             className="flex flex-col w-full items-center gap-10"
             action={async (formData) => {
               "use server";
-              await login(formData);
-              redirect("/admin/dashboard");
+              const email = formData.get("email");
+              const password = formData.get("password");
+
+              signIn("credentials", {
+                email,
+                password,
+                redirectTo: "/admin/dashboard",
+              });
+
+              // catch (error) {
+              //   console.log("NIIIIIIIFFFFFFFA");
+              //   if (error instanceof Error) {
+              //     if (isRedirectError(error)) {
+              //       throw error;
+              //     }
+              //     const { type, cause } = error;
+              //     switch (type) {
+              //       case "CredentialsSignin":
+              //         return "Invalid credentials.";
+              //       case "CallbackRouteError":
+              //         return cause?.err?.toString();
+              //       default:
+              //         return "Something went wrong.";
+              //     }
+              //   }
+
+              //   throw error;
+              // }
+
+              // await login(formData);
+              // redirect("/admin/dashboard");
             }}
           >
             <input
