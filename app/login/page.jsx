@@ -1,4 +1,4 @@
-import Login from "./components/Login";
+import Login from "../../components/login/Login";
 const page = () => {
   return (
     <div className="w-screen h-screen flex justify-center items-center bg-[#121212] ">

@@ -2,10 +2,10 @@
 import { BackgroundGradient } from "@/components/ui/background-gradient";
 import { X } from "lucide-react";
 import Image from "next/image";
-import Title from "@/app/game/components/title/Title";
-import AccordionContainer from "@/app/game/components/accordion/AccordionContainer";
-import Requirements from "@/app/game/components/Requirement/Requirements";
-import Download from "@/app/game/components/download/Download";
+import Title from "@/components/game/title/Title";
+import AccordionContainer from "@/components/game/accordion/AccordionContainer";
+import Requirements from "@/components/game/Requirement/Requirements";
+import Download from "@/components/game/download/Download";
 import { useRouter } from "next/navigation";
 
 const Container = ({ game }) => {

@@ -1,11 +1,11 @@
-import Navbar from "./components/navbar/Navbar";
-import LandingPage from "./components/landingpage/LandingPage";
-import AuthorSuggest from "./components/authorSection/AuthorSuggest";
-import Popular from "./components/popularSection/Popular";
-import RecentGames from "./components/recentGames/RecentGames";
-import Advertisment from "./components/Advertisment";
-import ShowCase from "./components/ShowCase";
-import Footer from "./components/Footer";
+import Navbar from "../components/home/navbar/Navbar";
+import LandingPage from "../components/home/landingpage/LandingPage";
+import AuthorSuggest from "../components/home/authorSection/AuthorSuggest";
+import Popular from "../components/home/popularSection/Popular";
+import RecentGames from "../components/home/recentGames/RecentGames";
+import Advertisment from "../components/home/Advertisment";
+// import ShowCase from "../components/home-page/ShowCase";
+import Footer from "../components/home/Footer";
 
 export default function Home() {
   return (

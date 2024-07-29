@@ -1,6 +1,6 @@
-import Modal from "../../login/components/Modal";
+import Modal from "../../../components/login/Modal";
 import Login from "@/app/login/components/Login";
-import Close from "./components/Close";
+import Close from "../../../components/login/Close";
 
 
 const Page = () => {

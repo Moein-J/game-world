@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { login } from "../../../lib/actions";
+import { login } from "../../lib/actions";
 import ShadowGradient from "@/components/ui/shadowgradient/ShadowGradient";
 import { redirect } from "next/navigation";
 

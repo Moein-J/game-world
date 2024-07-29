@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
-import Advertisement from "./components/Advertisement";
+import Advertisement from "../../components/signup/Advertisement";
 import { useRef } from "react";
 import axios from "axios";
 import { useRouter } from "next/navigation";
