@@ -1,9 +1,11 @@
+import { auth } from "@/lib/auth";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import Link from "next/link";
 import { GoHeart } from "react-icons/go";
 import Drawer from "./Drawer";
 
-const Navbar = () => {
+const Navbar = async () => {
+  const session = await auth();
   return (
     <>
       <Drawer />

@@ -1,5 +1,5 @@
-import Card from "./components/Card";
-import { cardsData } from "./components/data/data";
+import Card from "@/components/admin/dashboard/Card";
+import { cardsData } from "@/components/admin/dashboard/data/data";
 import { BarChart3 } from "lucide-react";
 
 const page = () => {

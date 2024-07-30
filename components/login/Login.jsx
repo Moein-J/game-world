@@ -24,34 +24,23 @@ const Login = () => {
               const email = formData.get("email");
               const password = formData.get("password");
 
-              signIn("credentials", {
-                email,
-                password,
-                redirectTo: "/admin/dashboard",
-              });
-
-              // catch (error) {
-              //   console.log("NIIIIIIIFFFFFFFA");
-              //   if (error instanceof Error) {
-              //     if (isRedirectError(error)) {
-              //       throw error;
-              //     }
-              //     const { type, cause } = error;
-              //     switch (type) {
-              //       case "CredentialsSignin":
-              //         return "Invalid credentials.";
-              //       case "CallbackRouteError":
-              //         return cause?.err?.toString();
-              //       default:
-              //         return "Something went wrong.";
-              //     }
-              //   }
-
-              //   throw error;
-              // }
-
-              // await login(formData);
-              // redirect("/admin/dashboard");
+              try {
+                await signIn("credentials", {
+                  email,
+                  password,
+                  redirectTo: "/admin/dashboard",
+                });
+              } catch (error) {
+                if (error instanceof AuthError) {
+                  switch (error.type) {
+                    case "CredentialsSignin":
+                      return { error: "invalid credentials!" };
+                    default:
+                      return { error: "something went wrong" };
+                  }
+                }
+                throw error;
+              }
             }}
           >
             <input

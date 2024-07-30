@@ -1,5 +1,5 @@
 import React from "react";
-import Panel from "../../components/admin/panel/Panel";
+import Panel from "@/components/admin/panel/Panel";
 
 const layout = ({ children }) => {
   return (

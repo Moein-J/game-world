@@ -1,6 +1,6 @@
-import Link from "next/link";
 import Item from "./Item";
 import Title from "./Title";
+import React from "react";
 import {
   LayoutDashboard,
   ArrowsUpFromLine,
@@ -11,6 +11,7 @@ import {
   GitPullRequestCreateArrow,
   ShoppingBasket,
 } from "lucide-react";
+import { signOut } from "@/lib/auth";
 
 const Panel = () => {
   const items = [
@@ -27,6 +28,7 @@ const Panel = () => {
     { url: "/admin/orders", text: "سفارش ها", icon: <ShoppingBasket /> },
     { url: "/admin/settings", text: "تنظیمات سایت", icon: <Settings /> },
   ];
+
   return (
     <section className="flex select-none flex-col items-center gap-4 w-[13%] border-l-2 border-[#9a9a9a80] p-4">
       {/* Upper section (title) */}
@@ -38,13 +40,17 @@ const Panel = () => {
           <Item item={item} key={index} />
         ))}
       </section>
+
       {/* exit section */}
-      <Link
-        href={"/"}
+      <form
         className="p-4 w-full rounded-xl text-center mb-4 bg-[#973636] text-[#9a9a9a] hover:text-[#fff] transition-all"
+        action={async () => {
+          "use server";
+          await signOut({ redirectTo: "/" });
+        }}
       >
-        خروج
-      </Link>
+        <button type="submit">خروج</button>
+      </form>
     </section>
   );
 };
