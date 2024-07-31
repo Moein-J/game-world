@@ -1,65 +1,54 @@
+"use client";
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
 import Link from "next/link";
-import { login } from "../../lib/actions";
 import ShadowGradient from "@/components/ui/shadowgradient/ShadowGradient";
-import { redirect } from "next/navigation";
-import { signIn } from "@/lib/auth";
-import { isRedirectError } from "next/dist/client/components/redirect";
-import { AuthError } from "next-auth";
+import { login } from "@/lib/actions";
+import { loginSchema } from "@/lib/schemas";
 
 const Login = () => {
-  // const logingHandler = async () => {
-  //   const res = await login(email.current.value, password.current.value);
-  //   // res ? router.push("/admin/dashboard") : null;
-  // };
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({
+    resolver: zodResolver(loginSchema),
+    defaultValues: { email: "", password: "" },
+  });
   return (
     <section className="w-full h-full flex justify-center items-center">
       <ShadowGradient>
-        <div className="border border-1 bg-[#121212] border-[#9a9a9a] w-[30rem] h-[28rem] rounded-xl flex flex-col items-center p-5 gap-14">
+        <div className="border border-1 bg-[#121212] border-[#9a9a9a] w-[30rem] h-[34rem] rounded-xl flex flex-col items-center p-5 gap-14">
           <h1 className="text-2xl text-[#fff]">ورود به حساب کاربری</h1>
 
           <form
             className="flex flex-col w-full items-center gap-10"
-            action={async (formData) => {
-              "use server";
-              const email = formData.get("email");
-              const password = formData.get("password");
-
-              try {
-                await signIn("credentials", {
-                  email,
-                  password,
-                  redirectTo: "/admin/dashboard",
-                });
-              } catch (error) {
-                if (error instanceof AuthError) {
-                  switch (error.type) {
-                    case "CredentialsSignin":
-                      return { error: "invalid credentials!" };
-                    default:
-                      return { error: "something went wrong" };
-                  }
-                }
-                throw error;
-              }
-            }}
+            action={handleSubmit(login)}
           >
-            <input
-              type="text"
-              name="email"
-              placeholder="نام کابری یا ایمیل"
-              className="login-input"
-            />
-            <input
-              type="password"
-              name="password"
-              placeholder="پسورد"
-              className="login-input"
-            />
+            <div className="w-full flex flex-col items-center gap-4">
+              <input
+                type="text"
+                {...register("email")}
+                placeholder="نام کابری یا ایمیل"
+                className="login-input invalid:border-pink-500 invalid:text-pink-600
+              focus:invalid:border-pink-500 focus:invalid:ring-pink-500"
+              />
+              <p className="text-sm text-[#be4343]">{errors.email?.message}</p>
+            </div>
+            <div className="w-full flex flex-col items-center gap-4">
+              <input
+                type="password"
+                {...register("password")}
+                placeholder="پسورد"
+                className="login-input"
+              />
+              <p className="text-sm text-[#be4343]">
+                {errors.password?.message}
+              </p>
+            </div>
+
             <button
               type="submit"
-              // onClick={() => {
-              //   logingHandler();
-              // }}
               className="inline-flex w-2/3 h-3 animate-shimmer items-center justify-center rounded-lg border border-slate-800 bg-[linear-gradient(110deg,#161a1e,45%,#282f36,55%,#161a1e)] bg-[length:200%_100%] px-10 py-6 font-medium text-[#ffffff] transition-colors"
             >
               ورود
