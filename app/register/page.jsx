@@ -3,11 +3,13 @@ import Link from "next/link";
 import { useForm } from "react-hook-form";
 import Image from "next/image";
 import Advertisement from "../../components/signup/Advertisement";
+import { useTransition } from "react";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { registerSchema } from "@/lib/schemas";
 import { createAccount } from "@/lib/actions";
 
 const page = () => {
+  const [isPending, startTransition] = useTransition();
   const {
     register,
     formState: { errors },
@@ -20,6 +22,12 @@ const page = () => {
       passwordR: "",
     },
   });
+  const handleRegister = (formData) => {
+    startTransition(async () => {
+      const data = await createAccount(formData);
+      console.log(data);
+    });
+  };
   return (
     <div
       className="w-screen flex h-screen relative bg-cover justify-center items-center"
@@ -38,7 +46,7 @@ const page = () => {
           <div className="flex-grow h-full flex flex-col gap-16 items-center px-2 py-8 ">
             <h1 className="text-4xl text-[#fff]">ساخت حساب</h1>
             <form
-              action={handleSubmit(createAccount)}
+              action={handleSubmit(handleRegister)}
               className="w-full flex flex-col gap-10 items-center"
             >
               <div className="w-full flex flex-col items-center gap-4">
