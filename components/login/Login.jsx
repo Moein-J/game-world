@@ -57,7 +57,7 @@ const Login = () => {
 
           <div className="flex gap-4 text-[#9a9a9a] mb-10">
             <Link href={"#"}>بازیابی رمز عبور</Link>
-            <Link href={"signup"} className="text-[#e58e27]">
+            <Link href={"/register"} className="text-[#e58e27]">
               ساخت اکانت
             </Link>
           </div>
