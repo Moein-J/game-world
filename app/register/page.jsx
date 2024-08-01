@@ -7,8 +7,10 @@ import { useTransition, useState } from "react";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { registerSchema } from "@/lib/schemas";
 import { createAccount, login } from "@/lib/actions";
+import { useRouter } from "next/navigation";
 
 const page = () => {
+  const router = useRouter();
   const [msg, setMsg] = useState("");
   const [code, setCode] = useState(2);
   const [isPending, startTransition] = useTransition();
@@ -31,7 +33,7 @@ const page = () => {
       const res = await createAccount(formData);
       if (res.code === 1) {
         const form = {
-          email: formData.phone_email,
+          phone_email: formData.phone_email,
           password: formData.password,
         };
         await login(form);
