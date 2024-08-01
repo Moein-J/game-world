@@ -43,13 +43,15 @@ const Panel = () => {
 
       {/* exit section */}
       <form
-        className="p-4 w-full rounded-xl text-center mb-4 bg-[#973636] text-[#9a9a9a] hover:text-[#fff] transition-all"
+        className="w-full rounded-xl text-center mb-4 bg-[#973636] text-[#9a9a9a] hover:text-[#fff] transition-all"
         action={async () => {
           "use server";
           await signOut({ redirectTo: "/" });
         }}
       >
-        <button type="submit">خروج</button>
+        <button className="p-4 w-full h-full" type="submit">
+          خروج
+        </button>
       </form>
     </section>
   );

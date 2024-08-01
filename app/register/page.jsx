@@ -3,12 +3,14 @@ import Link from "next/link";
 import { useForm } from "react-hook-form";
 import Image from "next/image";
 import Advertisement from "../../components/signup/Advertisement";
-import { useTransition } from "react";
+import { useTransition, useState } from "react";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { registerSchema } from "@/lib/schemas";
-import { createAccount } from "@/lib/actions";
+import { createAccount, login } from "@/lib/actions";
 
 const page = () => {
+  const [msg, setMsg] = useState("");
+  const [code, setCode] = useState(2);
   const [isPending, startTransition] = useTransition();
   const {
     register,
@@ -23,9 +25,19 @@ const page = () => {
     },
   });
   const handleRegister = (formData) => {
+    setMsg("");
+    setCode(2);
     startTransition(async () => {
-      const data = await createAccount(formData);
-      console.log(data);
+      const res = await createAccount(formData);
+      if (res.code === 1) {
+        const form = {
+          email: formData.phone_email,
+          password: formData.password,
+        };
+        await login(form);
+      }
+      setMsg(res.msg);
+      setCode(res.code);
     });
   };
   return (
@@ -79,10 +91,16 @@ const page = () => {
 
               <button
                 type="submit"
+                disabled={isPending}
                 className="inline-flex w-2/3 h-3 animate-shimmer items-center justify-center rounded-lg border border-slate-800 bg-[linear-gradient(110deg,#161a1e,45%,#282f36,55%,#161a1e)] bg-[length:200%_100%] px-10 py-6 font-medium text-[#ffffff] transition-colors"
               >
                 عضویت
               </button>
+              {code === 1 ? (
+                <p className="text-md text-[#188b52]">{msg}</p>
+              ) : (
+                <p className="text-md text-[#be4343]">{msg}</p>
+              )}
             </form>
           </div>
         </div>
