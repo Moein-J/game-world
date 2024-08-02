@@ -1,6 +1,6 @@
 import Item from "./Item";
 import Title from "./Title";
-import React from "react";
+import Link from "next/link";
 import {
   LayoutDashboard,
   ArrowsUpFromLine,
@@ -40,6 +40,8 @@ const Panel = () => {
           <Item item={item} key={index} />
         ))}
       </section>
+
+      <Link href={"/"} className="text-[#9a9a9a]">بازگشت به صفحه اصلی</Link>
 
       {/* exit section */}
       <form
