@@ -1,7 +1,8 @@
 import React from "react";
 import Panel from "@/components/admin/panel/Panel";
+const layout = async ({ children }) => {
+  
 
-const layout = ({ children }) => {
   return (
     <>
       <div className="h-screen bg-[#121212] p-11">
