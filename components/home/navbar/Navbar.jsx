@@ -18,11 +18,13 @@ const Navbar = async () => {
                   ? "/admin/dashboard"
                   : "/profile"
               }
+              className="flex items-center justify-center gap-4"
             >
               <Avatar className="h-8 w-8 bg-links text-[#1b1b1b] font-normal">
                 <AvatarImage src="" />
                 <AvatarFallback>CN</AvatarFallback>
               </Avatar>
+              <p>پنل کاربری</p>
             </Link>
           ) : (
             <Link href="/login">
