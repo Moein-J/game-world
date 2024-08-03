@@ -1,14 +1,6 @@
-import Title from "./Title";
-import Link from "next/link";
 import { signOut } from "@/lib/auth";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import {
-  Gamepad,
-  ShoppingCart,
-  MessageSquare,
-  MessagesSquare,
-  Settings,
-} from "lucide-react";
+import Items from "./profile-items";
 
 const Panel = ({ user }) => {
   return (
@@ -22,28 +14,7 @@ const Panel = ({ user }) => {
           <p className="text-links">{user?.email}</p>
         </div>
 
-        <div className="text-links w-full text-md flex flex-col gap-14">
-          <div className="flex flex-col items-center gap-1 cursor-pointer hover:text-[#fff]">
-            <Gamepad size={35} />
-            <p>بازی ها</p>
-          </div>
-          <div className="flex flex-col items-center gap-1 cursor-pointer hover:text-[#fff]">
-            <ShoppingCart size={35} />
-            <p>سبد خرید</p>
-          </div>
-          <div className="flex flex-col items-center gap-1 cursor-pointer hover:text-[#fff]">
-            <MessageSquare size={35} />
-            <p>پیام ها</p>
-          </div>
-          <div className="flex flex-col items-center gap-1 cursor-pointer hover:text-[#fff]">
-            <MessagesSquare size={35} />
-            <p>کامنت</p>
-          </div>
-          <div className="flex flex-col items-center gap-1 cursor-pointer hover:text-[#fff]">
-            <Settings size={35} />
-            <p>تنظیمات</p>
-          </div>
-        </div>
+        <Items />
 
         <form
           className="w-full rounded-xl text-center mb-4 bg-[#973636] text-[#9a9a9a] hover:text-[#fff] transition-all"

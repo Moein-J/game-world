@@ -27,7 +27,7 @@ const Navbar = async () => {
               <p>پنل کاربری</p>
             </Link>
           ) : (
-            <Link href="/login">
+            <Link prefetch={false} href="/login">
               <Avatar className="h-8 w-8 bg-links text-[#1b1b1b] font-normal">
                 <AvatarImage src="" />
                 <AvatarFallback>CN</AvatarFallback>
