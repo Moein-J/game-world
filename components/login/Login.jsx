@@ -3,9 +3,10 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import Link from "next/link";
 import ShadowGradient from "@/components/ui/shadowgradient/ShadowGradient";
-import { login } from "@/lib/actions";
+import { googleLogin, login } from "@/lib/actions";
 import { loginSchema } from "@/lib/schemas";
 import { useTransition, useState } from "react";
+import { BiLogoGoogle } from "react-icons/bi";
 
 const Login = () => {
   const [isPending, startTransition] = useTransition();
@@ -73,12 +74,16 @@ const Login = () => {
               <p className="text-[#be4343]">{msg}</p>
             </div>
           </form>
-
-          <div className="flex gap-4 text-[#9a9a9a] mb-10">
+          <div className="flex gap-4 text-[#9a9a9a] mb-10 items-center">
             <Link href={"#"}>بازیابی رمز عبور</Link>
             <Link href={"/register"} className="text-[#e58e27]">
               ساخت اکانت
             </Link>
+            <form action={googleLogin}>
+              <button type="submit">
+                <BiLogoGoogle size={24} />
+              </button>
+            </form>
           </div>
         </div>
       </ShadowGradient>

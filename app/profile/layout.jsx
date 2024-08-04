@@ -2,6 +2,8 @@ import Panel from "@/components/profile/profile-panel";
 import { userProvider } from "@/lib/actions";
 import Link from "next/link";
 import { Home, TicketIcon } from "lucide-react";
+import { Suspense } from "react";
+import Loading from "../@auth/(...)login/loading";
 
 const layout = async ({ children }) => {
   const user = await userProvider();
@@ -26,7 +28,9 @@ const layout = async ({ children }) => {
             </Link>
           </div>
           <div className="flex justify-end flex-grow rounded-2xl bg-[#242529]">
-            <div className="w-full h-full text-right">{children}</div>
+            <div className="w-full h-full text-right">
+              <Suspense fallback={<Loading />}>{children}</Suspense>
+            </div>
           </div>
         </div>
 
