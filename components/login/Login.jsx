@@ -79,7 +79,7 @@ const Login = () => {
             <Link href={"/register"} className="text-[#e58e27]">
               ساخت اکانت
             </Link>
-            <form action={googleLogin}>
+            <form action={googleLogin} className="flex justify-center">
               <button type="submit">
                 <BiLogoGoogle size={24} />
               </button>
