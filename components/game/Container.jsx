@@ -10,6 +10,7 @@ import { useRouter } from "next/navigation";
 
 const Container = ({ game }) => {
   const router = useRouter();
+  
   return (
     <BackgroundGradient>
       <div className="h-[60rem] w-full rounded-xl bg-[#121212] flex flex-col p-4 text-[#fff] gap-10">

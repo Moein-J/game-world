@@ -1,4 +1,5 @@
 import TitleItem from "./TitleItem";
+
 const Title = ({ game }) => {
   return (
     <div dir="rtl" className="flex-grow items-start flex flex-col gap-8 xs:w-full lg:w-auto">
