@@ -1,9 +1,12 @@
 import Game from "./Game";
 const Actions = async () => {
   let games;
+
   try {
     const res = await fetch(
-      "http://localhost:2222/games?id=1&name=1&tags=1&information=1&repacksList=1&category=1",
+      process.env.NODE_ENV === "production"
+        ? `${process.env.BACKEND_URL}/games?id=1&name=1&tags=1&information=1&repacksList=1&category=1`
+        : `http://localhost:3000/games?id=1&name=1&tags=1&information=1&repacksList=1&category=1`,
       {
         method: "GET",
         next: { revalidate: 20000 },
