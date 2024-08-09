@@ -1,6 +1,8 @@
 "use client";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { X } from "lucide-react";
+import { useRouter } from "next/navigation";
 import Link from "next/link";
 import ShadowGradient from "@/components/ui/shadowgradient/ShadowGradient";
 import { googleLogin, login } from "@/lib/actions";
@@ -9,6 +11,7 @@ import { useTransition, useState } from "react";
 import { BiLogoGoogle } from "react-icons/bi";
 
 const Login = () => {
+  const router = useRouter();
   const [isPending, startTransition] = useTransition();
   const [msg, setMsg] = useState("");
   const {
@@ -32,7 +35,12 @@ const Login = () => {
     <section className="w-full h-full flex justify-center items-center">
       <ShadowGradient>
         <div className="border border-1 bg-[#121212] border-[#9a9a9a] w-[30rem] h-[34rem] rounded-xl flex flex-col items-center p-5 gap-14">
-          <h1 className="text-2xl text-[#fff]">ورود به حساب کاربری</h1>
+          <div className="flex flex-row-reverse w-full justify-center">
+            <button className="absolute right-5" onClick={() => router.back()}>
+              <X size={30} className="hover:text-[#8f3d3d] text-[#fff]" />
+            </button>
+            <h1 className="text-2xl text-[#fff]">ورود به حساب کاربری</h1>
+          </div>
 
           <form
             className="flex flex-col w-full items-center gap-10"

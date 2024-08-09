@@ -66,6 +66,7 @@ const page = () => {
               <div className="w-full flex flex-col items-center gap-4">
                 <input
                   {...register("phone_email")}
+                  autoComplete="off"
                   type="text"
                   placeholder="ایمیل یا شماره موبایل"
                   className="login-input"
@@ -104,6 +105,15 @@ const page = () => {
                 <p className="text-md text-[#be4343]">{msg}</p>
               )}
             </form>
+            <div className="flex w-full gap-3 justify-center text-links">
+              <Link href={"/login"} className="text-textOrange">
+                ورود با حساب کاربری
+              </Link>
+              /
+              <Link href={"/"} className="text-links">
+                خانه
+              </Link>
+            </div>
           </div>
         </div>
       </div>
