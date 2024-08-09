@@ -2,9 +2,14 @@ import axios from "axios";
 import Container from "@/components/game/Container";
 
 const page = async ({ params }) => {
-  const data = await fetch("http://localhost:2222/games/" + params.gameid, {
-    method: "GET",
-  });
+  const data = await fetch(
+    process.env.NODE_ENV === "production"
+      ? `${process.env.BACKEND_URL}/games/` + params.gameid
+      : "http://localhost:3000/games/" + params.gameid,
+    {
+      method: "GET",
+    }
+  );
   const game = await data.json();
 
   return (

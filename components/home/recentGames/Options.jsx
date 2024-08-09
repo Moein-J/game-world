@@ -2,10 +2,15 @@ import CheckBox from "@/components/ui/CheckBox";
 const Options = () => {
   return (
     <div className="p-6 lg:w-[25%] xs:w-full" id="recent-options">
-      <div className="bg-bgSecondary rounded-lg w-full h-full py-2 px-4 flex flex-col text-links items-end">
+      <div className="bg-bgSecondary rounded-lg w-full relative h-full py-2 px-4 flex flex-col text-links items-end">
+        {/* IN DEVELOPMENT SECTION */}
+        <div className="rounded-lg w-full h-full flex justify-center items-center flex-col absolute top-0 right-0  backdrop-blur-[2px] z-20">
+          <p className="text-2xl font-bold">IN DEVELOPMENT</p>
+        </div>
+        {/* ------------ */}
         <h2 className="text-[#ffffff] text-lg">دسته بندی ها</h2>
         <div className="lg:flex lg:flex-col lg:items-end xs:grid xs:grid-cols-3 xs:w-full text-nowrap relative">
-          <CheckBox name={"action"} text={"اکشن"}/>
+          <CheckBox name={"action"} text={"اکشن"} />
           <CheckBox name={"horror"} text={"ترسناک"} />
           <CheckBox name={"strategic"} text={"استراتژی"} />
           <CheckBox name={"sport"} text={"ورزشی"} />
