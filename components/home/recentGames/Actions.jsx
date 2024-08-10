@@ -20,7 +20,7 @@ const Actions = async () => {
   return (
     <>
       {games &&
-        games.map((game) => (
+        games.slice(0, 12).map((game) => (
           <Game
             key={game._id}
             game={{
