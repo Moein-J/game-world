@@ -1,4 +1,6 @@
+import { Suspense } from "react";
 import Game from "./Game";
+import Loading from "./loading";
 import { keepPreviousData, useQuery } from "@tanstack/react-query";
 
 const Actions = ({ page }) => {
@@ -34,7 +36,10 @@ const Actions = ({ page }) => {
 
   return (
     <>
-      {games &&
+      {isPending || isFetching ? (
+        <Loading />
+      ) : (
+        games &&
         games.slice(0, 12).map((game) => (
           <Game
             key={game._id}
@@ -46,7 +51,8 @@ const Actions = ({ page }) => {
               category: game.category,
             }}
           />
-        ))}
+        ))
+      )}
     </>
   );
 };
