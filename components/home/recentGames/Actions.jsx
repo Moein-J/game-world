@@ -14,18 +14,17 @@ const Actions = ({ page }) => {
   } = useQuery({
     queryKey: ["projects", page],
     queryFn: () => fetchProjects(page),
+    refetchOnWindowFocus: false,
     placeholderData: keepPreviousData,
   });
   const fetchProjects = async () => {
     try {
-      console.log(process.env.NEXT_PUBLIC_NODE_ENV);
       const res = await fetch(
         process.env.NEXT_PUBLIC_NODE_ENV === "production"
           ? `${process.env.BACKEND_URL}/games?id=1&name=1&tags=1&information=1&repacksList=1&category=1&page=${page}`
           : `http://localhost:3000/games?id=1&name=1&tags=1&information=1&repacksList=1&category=1&page=${page}`,
         {
           method: "GET",
-          // next: { revalidate: 20000 },
         }
       );
       const dataObj = await res.json();
