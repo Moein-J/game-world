@@ -1,8 +1,18 @@
 import { ChevronsLeft, ChevronsRight } from "lucide-react";
-const Pagination = () => {
+const Pagination = ({ setPage }) => {
   return (
     <div className="justify-center items-center gap-10 text-[#fff] md:flex hidden">
-      <button href="#" className="cursor-pointer hover:text-textOrange">
+      <button
+        className="cursor-pointer hover:text-textOrange"
+        onClick={() => {
+          setPage((prev) => {
+            if (prev !== 1) {
+              return prev - 1;
+            }
+            return 1;
+          });
+        }}
+      >
         <ChevronsLeft />
       </button>
 
@@ -21,7 +31,12 @@ const Pagination = () => {
       <button href="#" className="cursor-pointer hover:text-textOrange">
         5
       </button>
-      <button href="#" className="cursor-pointer hover:text-textOrange">
+      <button
+        className="cursor-pointer hover:text-textOrange"
+        onClick={() => {
+          setPage((prev) => prev + 1);
+        }}
+      >
         <ChevronsRight />
       </button>
     </div>
