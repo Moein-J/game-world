@@ -1,9 +1,8 @@
 "use client";
 import { QueryClientProvider, QueryClient } from "@tanstack/react-query";
-import { Suspense, useState } from "react";
+import { useState } from "react";
 import Options from "./Options";
 import Pagination from "./Pagination";
-import Loading from "./loading";
 import Actions from "./Actions";
 
 const queryClient = new QueryClient();
@@ -20,9 +19,7 @@ const RecentGames = () => {
         <div className="flex flex-col w-full">
           <div className="flex-grow p-6 h-full overflow-x-auto grid xs:grid-flow-col md:grid-cols-4 md:grid-rows-3 gap-4">
             <QueryClientProvider client={queryClient}>
-              <Suspense fallback={<Loading />}>
                 <Actions page={page} />
-              </Suspense>
             </QueryClientProvider>
           </div>
           <Pagination setPage={setPage} />
