@@ -1,4 +1,4 @@
-export const fetchData = async () => {
+export const fetchData = async (page) => {
   try {
     const res = await fetch(
       process.env.NEXT_PUBLIC_NODE_ENV === "production"
